@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to my python weather app</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+</head>
+<body>
+    <main>
+        <h1 class="heading">Get Weather Condition Around The World</h1>
+        <form action="/weather">
+            <input type="text" name="cityName" id="city" placeholder="Enter A City Name">
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
