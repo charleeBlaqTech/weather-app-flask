@@ -18,5 +18,9 @@ if __name__ == "__main__":
     print(f'\n*** Get current Weather conditions ☁☁☁ ***\n')
 
     city= input("\nPlease enter a city name:\n")
+    # CHECK FOR POSSIBLE EMPTY STRING
+    if not bool(city.strip()):
+        city = "lagos"
+        
     weather_data= get_current_weather(city)
     pprint(weather_data);

@@ -24,7 +24,14 @@ def index():
 
 def get_weather():
     city            = request.args.get('cityName')
+    # CHECK FOR POSSIBLE EMPTY STRING
+    if not bool(city.strip()):
+        city = "lagos"
     weather_data    = get_current_weather(city)
+
+    #city is not found by API
+    if not weather_data['cod'] == 200:
+        return render_template('404-error.html', ERROR="The city you entered not found")
     return render_template(
         'weather.html',
         city      =weather_data["name"],
