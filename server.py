@@ -1,7 +1,6 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 from weather import get_current_weather
 from waitress import serve
-import requests
 from dotenv import load_dotenv
 import os
 from pprint import pprint

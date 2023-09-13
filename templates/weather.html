@@ -8,13 +8,16 @@
 </head>
 <body>
     <main>
-        <h1 class="heading">CITY:: <span>{{city}}</span></h1>
-        <h1 class="heading">COUNTRY:: <span>{{country}}</span></h1>
-        <p class="heading" style="margin-top: 17px;">Current Weather Update</p>
-        <div class="output-wrapper">
-            <p>{{desc}} and {{temp}} &deg; celsius</p>
-            <p>Feels Like {{feels_like}} &deg; celsius</p>
+        <div class="topsection">
+            <h1 class="heading">CITY:: <span>{{city}}</span></h1>
+            <h1 class="heading">COUNTRY:: <span>{{country}}</span></h1>
+            <p class="heading" style="margin-top: 17px;">Current Weather Update</p>
+            <div class="output-wrapper">
+                <p>{{desc}} and <span>{{temp}}</span>&deg; celsius</p>
+                <p>Feels Like <span>{{feels_like}}</span>&deg; celsius</p>
+            </div>
         </div>
+        
 
         <form action="/weather">
             <input type="text" name="cityName" id="city" placeholder="Enter A City Name">
